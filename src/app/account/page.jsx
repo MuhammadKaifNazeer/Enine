@@ -1,9 +1,17 @@
-import React from 'react'
+import MainLayout from "@/layouts/MainLayout";
 
 const Account = () => {
   return (
-    <div>Account</div>
-  )
-}
+    <>
+      <h1>Account</h1>
+    </>
+  );
+};
 
-export default Account
+export default function App() {
+  return (
+    <MainLayout>
+      <Account />
+    </MainLayout>
+  );
+}

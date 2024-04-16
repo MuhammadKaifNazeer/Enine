@@ -1,9 +1,17 @@
-import React from 'react'
+import MainLayout from "@/layouts/MainLayout";
 
 const Notes = () => {
   return (
-    <div>Notes</div>
-  )
-}
+    <>
+      <h1>Notes</h1>
+    </>
+  );
+};
 
-export default Notes
+export default function App() {
+  return (
+    <MainLayout>
+      <Notes />
+    </MainLayout>
+  );
+}

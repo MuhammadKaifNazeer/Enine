@@ -1,9 +1,17 @@
-import React from 'react'
+import MainLayout from "@/layouts/MainLayout";
 
 const Write = () => {
   return (
-    <div>Write</div>
-  )
-}
+    <>
+      <h1>Write</h1>
+    </>
+  );
+};
 
-export default Write
+export default function App() {
+  return (
+    <MainLayout>
+      <Write />
+    </MainLayout>
+  );
+}

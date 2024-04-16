@@ -68,7 +68,7 @@ const Sidebar = () => {
             </div>
             <div className="mt-5">
               <div className="flex flex-col gap-2 w-full">
-                <Link href={"/"}>
+                <Link href={"/notes"}>
                   <Button
                     variant={"ghost"}
                     className="w-full flex gap-2 justify-start items-center"
@@ -77,7 +77,7 @@ const Sidebar = () => {
                     Notes
                   </Button>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/account"}>
                   <Button
                     variant={"ghost"}
                     className="w-full flex gap-2 justify-start items-center"
@@ -86,7 +86,7 @@ const Sidebar = () => {
                     Account
                   </Button>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/settings"}>
                   <Button
                     variant={"ghost"}
                     className="w-full flex gap-2 justify-start items-center"
@@ -101,81 +101,6 @@ const Sidebar = () => {
                     Write
                   </Button>
                 </Link>
-                {/* <h3 className="mx-3 mt-5 mb-2">Categories</h3> */}
-                {/* <div className="overflow-y-scroll h-[16rem]">
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-                <Link href={"/"}>
-                  <Button
-                    variant={"ghost"}
-                    className="w-full flex gap-2 justify-start items-center"
-                  >
-                    <BookmarkIcon />
-                    Office tasks
-                  </Button>
-                </Link>
-              </div> */}
               </div>
               <div className="absolute left-0 bottom-3 w-full px-3">
                 <Separator className="absolute -top-3 left-0 w-full" />
