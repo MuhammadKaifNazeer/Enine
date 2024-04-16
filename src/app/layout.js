@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <main className="mt-16 md:ml-[300px] md:mt-3">{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

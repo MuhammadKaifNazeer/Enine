@@ -6,8 +6,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Sidebar />
-      Page
+      <main className="mt-16 md:ml-[300px] md:mt-3">
+        <Sidebar />
+        Page
+      </main>
     </>
   );
 }
