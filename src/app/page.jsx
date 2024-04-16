@@ -1,17 +1,12 @@
-import MainLayout from "@/layouts/MainLayout";
+"use client";
+
+import React from "react";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
-  return (
-    <>
-      <h1>Home</h1>
-    </>
-  );
+  const router = useRouter();
+  router.push("/notes");
+  return <></>;
 };
 
-export default function App() {
-  return (
-    <MainLayout>
-      <Home />
-    </MainLayout>
-  );
-}
+export default Home;
