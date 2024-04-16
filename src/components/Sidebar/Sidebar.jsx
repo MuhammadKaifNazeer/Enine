@@ -14,6 +14,8 @@ import {
   GearIcon,
   HamburgerMenuIcon,
   HomeIcon,
+  Pencil1Icon,
+  Pencil2Icon,
   PersonIcon,
 } from "@radix-ui/react-icons";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
@@ -30,7 +32,7 @@ const Sidebar = () => {
     <>
       <header className="fixed md:hidden w-full top-0 flex border-b items-center justify-between gap-4 bg-background px-4 py-2 md:px-6">
         <Link href={"/"}>
-          <h3 className="text-2xl font-bold">Enine</h3>
+          <h3 className="text-2xl font-bold">Capture</h3>
         </Link>
         <div className="flex items-center justify-end gap-3">
           <ThemeToggler />
@@ -53,24 +55,14 @@ const Sidebar = () => {
         <div className="h-full px-3 py-4">
           <div className="flex items-center justify-between mb-3">
             <Link href={"/"}>
-              <h3 className="mx-3 text-2xl font-bold">Enine</h3>
+              <h3 className="mx-3 text-2xl font-bold">Capture</h3>
             </Link>
             <div className="sm:block hidden">
               <ThemeToggler />
             </div>
           </div>
-          <Separator />
           <div className="mt-5">
             <div className="flex flex-col gap-2 w-full">
-              <Link href={"/"}>
-                <Button
-                  variant={"ghost"}
-                  className="w-full flex gap-2 justify-start items-center"
-                >
-                  <HomeIcon />
-                  Home
-                </Button>
-              </Link>
               <Link href={"/"}>
                 <Button
                   variant={"ghost"}
@@ -85,8 +77,23 @@ const Sidebar = () => {
                   variant={"ghost"}
                   className="w-full flex gap-2 justify-start items-center"
                 >
+                  <PersonIcon />
+                  Account
+                </Button>
+              </Link>
+              <Link href={"/"}>
+                <Button
+                  variant={"ghost"}
+                  className="w-full flex gap-2 justify-start items-center"
+                >
                   <GearIcon />
                   Settings
+                </Button>
+              </Link>
+              <Link href={"/"}>
+                <Button className="w-full flex gap-2 justify-center items-center text-md h-[2.5rem] rounded-full">
+                  <Pencil2Icon style={{ width: "20px", height: "20px" }} />
+                  Write
                 </Button>
               </Link>
               {/* <h3 className="mx-3 mt-5 mb-2">Categories</h3> */}
