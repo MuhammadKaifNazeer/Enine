@@ -12,10 +12,10 @@ const Write = () => {
   const [Description, setDescription] = useState("");
 
   return (
-    <div className="write px-[1rem] sm:px-[0rem]" id="write">
-      <h1 className="text-3xl font-bold mt-10 ">Create Note</h1>
+    <div className="write px-[1rem] md:px-[0rem]" id="write">
+      <h1 className="text-3xl font-bold md:mt-10 mt-[5rem] ">Create Note</h1>
 
-      <div className="lg:w-[80%] md:w-[90%] mt-[3rem]  w-[100%] grid gap-4">
+      <div className="lg:w-[80%] md:w-[90%] mt-[1rem]  w-[100%] grid gap-4">
         <div className="grid gap-2">
           <Input
             onChange={(e) => setTitle(e.target.value)}
@@ -26,7 +26,7 @@ const Write = () => {
           <Textarea
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description..."
-            className="rounded-[.5rem] h-[50vh] focus-visible:ring-0"
+            className="rounded-[.5rem] h-[55vh] focus-visible:ring-0"
           />
         </div>
         <Link href={"/"}>
