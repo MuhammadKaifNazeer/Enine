@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
+import MainLayout from "@/layouts/MainLayout";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
@@ -39,4 +39,10 @@ const Write = () => {
   );
 };
 
-export default Write;
+export default function App() {
+  return (
+    <MainLayout>
+      <Write />
+    </MainLayout>
+  );
+}

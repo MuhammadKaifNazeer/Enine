@@ -1,4 +1,5 @@
 import React from "react";
+import MainLayout from "@/layouts/MainLayout";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import {
@@ -340,4 +341,10 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default function App() {
+  return (
+    <MainLayout>
+      <Notes />
+    </MainLayout>
+  );
+}
