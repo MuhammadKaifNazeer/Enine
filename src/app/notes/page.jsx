@@ -1,17 +1,26 @@
-import MainLayout from "@/layouts/MainLayout";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const Notes = () => {
   return (
     <>
-      <h1>Notes</h1>
+      <div className="notes" id="notes">
+        <div className="searchbar flex justify-center items-center mt-10">
+          <div className="flex w-full max-w-lg items-center border rounded-full">
+            <Input
+              type="text"
+              placeholder="Search for notes..."
+              className="border-none"
+            />
+            <Button type="submit" className="">
+              Search
+            </Button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-export default function App() {
-  return (
-    <MainLayout>
-      <Notes />
-    </MainLayout>
-  );
-}
+export default Notes;

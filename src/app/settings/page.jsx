@@ -1,17 +1,9 @@
-import MainLayout from "@/layouts/MainLayout";
+import React from 'react'
 
 const Settings = () => {
   return (
-    <>
-      <h1>Settings</h1>
-    </>
-  );
-};
-
-export default function App() {
-  return (
-    <MainLayout>
-      <Settings />
-    </MainLayout>
-  );
+    <div>Settings</div>
+  )
 }
+
+export default Settings
