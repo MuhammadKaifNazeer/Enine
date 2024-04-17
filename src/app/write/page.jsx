@@ -24,7 +24,7 @@ const Write = () => {
             className="focus-visible:ring-0 p-3 px-5 text-md h-max rounded-[.5rem]"
           />
           <Textarea
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
             placeholder="Description..."
             className="rounded-[.5rem] h-[50vh] focus-visible:ring-0"
           />
