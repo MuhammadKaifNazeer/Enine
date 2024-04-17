@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
@@ -53,7 +53,7 @@ const Sidebar = () => {
           </div>
         </header>
         <aside
-          className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 absolute left-${
+          className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 left-[-300px] absolute left-${
             isOpen ? "0" : "[-300px]"
           } top-0 z-40 border-r`}
         >
