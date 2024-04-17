@@ -1,0 +1,45 @@
+.notesContainer {
+  margin-top: 1.25rem;
+  columns: 3;
+  gap: 5px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.note{
+    break-inside: avoid;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .notesContainer {
+        columns: 2;
+      }
+}
+
+@media screen and (max-width: 900px) {
+    .notesContainer {
+        columns: 1;
+      }
+}
+
+@media screen and (max-width: 767px) {
+    .notesContainer {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+}
+
+@media screen and (max-width: 500px) {
+    .notesContainer {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+}
+
+@media screen and (max-width: 400px) {
+    .notesContainer {
+        padding-right: 0.4rem;
+        padding-left: 0.4rem;
+      }
+}
