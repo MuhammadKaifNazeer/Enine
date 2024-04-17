@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "../ui/Button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
@@ -40,11 +40,11 @@ const Sidebar = () => {
             <h3 className="text-2xl font-bold">Capture</h3>
           </Link>
           <div className="flex items-center justify-end gap-3">
-            <ThemeToggler />
+            {!isOpen && <ThemeToggler />}
             <Button
               variant="outline"
               size="icon"
-              className="shrink-0"
+              className="shrink-0 rounded"
               onClick={toggleSidebar}
             >
               <HamburgerMenuIcon className="h-5 w-5" />
@@ -53,7 +53,7 @@ const Sidebar = () => {
           </div>
         </header>
         <aside
-          className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 left-[-300px] absolute left-${
+          className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 absolute left-${
             isOpen ? "0" : "[-300px]"
           } top-0 z-40 border-r`}
         >
