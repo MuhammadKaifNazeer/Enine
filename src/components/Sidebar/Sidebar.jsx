@@ -43,8 +43,8 @@ const Sidebar = () => {
         </div>
       </header>
       <aside
-        className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 absolute left-${
-          isOpen ? "0" : "[-300px]"
+        className={`w-[270px] bg-background max-w-[80%] h-screen duration-500 md:fixed md:left-0 absolute ${
+          isOpen ? "left-0" : "left-[-300px]"
         } top-0 z-40 border-r`}
       >
         <div className="h-full px-3 py-4">
