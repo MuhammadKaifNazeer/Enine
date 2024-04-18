@@ -52,7 +52,7 @@ const Sidebar = () => {
             <Link href={"/"}>
               <h3 className="mx-3 text-2xl font-bold">Capture</h3>
             </Link>
-            <div className="sm:block hidden">
+            <div className="md:block hidden">
               <ThemeToggler />
             </div>
           </div>
