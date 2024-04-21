@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <>
       <div className={styles.main}>
-        <div class={styles.loader}>
+        <div className={styles.loader}>
           <div></div>
           <div></div>
           <div></div>
