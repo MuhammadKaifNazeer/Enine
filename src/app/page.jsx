@@ -6,7 +6,7 @@ import Loader from "@/components/Loader/Loader";
 
 const Home = () => {
   const router = useRouter();
-  router.push("/notes");
+  router.push("/login");
   return (
     <>
       <Loader />

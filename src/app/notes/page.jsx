@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
 import { Button } from "@/components/ui/Button";
@@ -20,8 +22,18 @@ import { Switch } from "@/components/ui/switch";
 import styles from "./notes.module.css";
 import Link from "next/link";
 import { DotsVerticalIcon } from "@radix-ui/react-icons";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Notes = () => {
+  const { data: session } = useSession(); // Get session data
+  const router = useRouter();
+
+  if (!session) {
+    router.push("/login"); // Redirect to login if not authenticated
+    return null; // Prevent rendering content before redirect
+  }
+
   return (
     <>
       <div className="notes" id="notes">

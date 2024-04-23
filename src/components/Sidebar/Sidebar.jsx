@@ -4,17 +4,15 @@ import React, { useState } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import {
   CopyIcon,
-  DotsHorizontalIcon,
-  ExitIcon,
   GearIcon,
   HamburgerMenuIcon,
   Pencil2Icon,
   PersonIcon,
 } from "@radix-ui/react-icons";
 import { ThemeToggler } from "../ThemeToggler/ThemeToggler";
+import UserInfo from "../UserInfo/UserInfo";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,43 +92,7 @@ const Sidebar = () => {
             </div>
             <div className="absolute left-0 bottom-3 w-full px-3">
               <Separator className="absolute -top-3 left-0 w-full" />
-              {/* <Button className="w-full flex gap-2 justify-center items-center text-white h-[2.5rem] text-lg">
-                Signin
-              </Button> */}
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button variant="ghost" className="w-full justify-start">
-                    <div className="flex justify-between items-center w-full">
-                      <div className="flex gap-2">
-                        <span>Username</span>
-                      </div>
-                      <DotsHorizontalIcon />
-                    </div>
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="mb-3 w-56 p-3 rounded">
-                  <div className="space-y-1">
-                    <Link href="/">
-                      <Button
-                        variant={"ghost"}
-                        size="sm"
-                        className="w-full flex items-center gap-2 justify-start"
-                      >
-                        <PersonIcon />
-                        Account Settings
-                      </Button>
-                    </Link>
-                    <Button
-                      variant={"ghost"}
-                      size="sm"
-                      className="w-full flex items-center gap-2 justify-start"
-                    >
-                      <ExitIcon />
-                      Log Out
-                    </Button>
-                  </div>
-                </PopoverContent>
-              </Popover>
+              <UserInfo />
             </div>
           </div>
         </div>
