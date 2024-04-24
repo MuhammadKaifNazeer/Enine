@@ -21,6 +21,14 @@ export default function UserInfo() {
     await signOut();
     router.push("/login"); // Redirect to login page after logout
   };
+
+  const trimUsername = (username) => {
+    if (username?.length > 20) {
+      return username.slice(0, 20) + "...";
+    }
+    return username;
+  };
+
   return (
     <>
       <div>
@@ -29,7 +37,7 @@ export default function UserInfo() {
             <Button variant="ghost" className="w-full justify-start">
               <div className="flex justify-between items-center w-full">
                 <div className="flex gap-2">
-                  <span>{session?.user?.name}</span>
+                  <span>{trimUsername(session?.user?.name)}</span>
                 </div>
                 <DotsHorizontalIcon />
               </div>
