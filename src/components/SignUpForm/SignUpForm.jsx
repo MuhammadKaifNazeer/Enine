@@ -14,8 +14,11 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Loader from "../Loader/Loader";
+import { useSession } from "next-auth/react";
 
 export function SignUpForm() {
+  const { data: session } = useSession();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,6 +26,11 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
+
+  if (session) {
+    router.push("/notes");
+    return null;
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -122,7 +130,7 @@ export function SignUpForm() {
               </Button>
 
               {error && (
-                <div className=" border w-fit text-sm py-1 px-3 rounded ">
+                <div className=" border border-red-500 text-red-500 w-fit text-sm py-1 px-3 rounded ">
                   {error}
                 </div>
               )}

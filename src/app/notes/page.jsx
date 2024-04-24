@@ -26,7 +26,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const Notes = () => {
-  const { data: session } = useSession(); // Get session data
+  const { data: session } = useSession();  
   const router = useRouter();
 
   if (!session) {
