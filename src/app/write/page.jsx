@@ -6,10 +6,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Write = () => {
+  const { data: session } = useSession();
   const [title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
+  const router = useRouter();
+
+  if (!session) {
+    router.push("/login"); // Redirect to login if not authenticated
+    return null; // Prevent rendering content before redirect
+  }
 
   return (
     <div className="write px-[1rem] md:px-[0rem]" id="write">
